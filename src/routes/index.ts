@@ -1,13 +1,9 @@
 import {Router} from "express"
-
+import ControllerProduct from "../Controllers/product"
 const router = Router()
 
-router.get("/api/productos",(req,res)=>{
-  res.send("esta vacio")
-})
+router.post("/api/product",ControllerProduct.createProduct)
 
-router.post("api/product",(req,res)=>{
-  
-})
+router.get("/api/product",ControllerProduct.getProduct)
 
 export {router};
